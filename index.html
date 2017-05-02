@@ -1,0 +1,191 @@
+
+
+<!doctype html>
+<html lang="en">
+
+    <!-- Head section -->
+    <head>
+        <title>Freshness</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/base.css">
+        
+        <script>
+            
+            $(document).ready(function() {
+                
+                // open the conditional panel
+                $('#categoryButton').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p1').show();
+                });
+                
+                // close the conditional panel
+                $('#closeButton').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p3').hide();
+                });
+                
+                // open & close the conditional contents in panel
+                $('#cv1').click(function() {
+                    $('#p1').toggle();
+                    $('#p2').fadeToggle("slow");
+                });
+                $('#cv2').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p2').hide();
+                });
+                $('#cv3').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p2').hide();
+                });
+                $('#cv4').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p2').hide();
+                });
+                $('#cv5').click(function() {
+                    $('#searchPanel').slideToggle();
+                    $('#p2').hide();
+                });
+                $('#cm1').click(function() {
+                    $('#searchPanel').slideToggle();
+                });
+                $('#cf1').click(function() {
+                    $('#searchPanel').slideToggle();
+                });
+                $('#cd1').click(function() {
+                    $('#searchPanel').slideToggle();
+                });
+                
+            });
+        </script>
+    </head>
+
+    <!-- Body section -->
+    <body id="mainBodyStyle">
+
+        <!-- Navi -->
+        <nav id="mainNav">
+            <div>
+                <a href="index.html" id="logoLabel">Freshness</a>
+            </div>
+        </nav>
+
+        <!-- search header -->
+        <div id="searchHeader">
+            <a class="navButton" id="categoryButton">Category</a>
+            <div id="or">OR</div>
+            <form name="search1" method="post" action="#" id="searchBar">
+                <input type="text" name="searchText" id="searchText" size="30" required>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="spaceForHeader"></div>
+        
+        <!-- search panel (hiding) -->
+        <div id="searchPanel">
+            <a id="closeButton"><img src="images/close.png" alt="close"></a>
+            <table id="searchConditionalTable">
+                <tr class="verticalTop" id="p1">
+                    <td>
+                        <input type="radio" name="category" id="cv1" value="vegi">Vegitables<br>
+                        <input type="radio" name="category" id="cm1" value="meat">Meats<br>
+                    </td>
+                    <td>
+                        <input type="radio" name="category" id="cf1" value="fish">Fishes<br>
+                        <input type="radio" name="category" id="cd1" value="daily">Daily foods<br>
+                    </td>
+                </tr>
+                <tr class="verticalTop" id="p2">
+                    <td>
+                        <input type="radio" name="category" id="cv2" value="vegi">Leef Vegitables<br>
+                        <input type="radio" name="category" id="cv4" value="vegi">Other Vegitables<br>                        
+                    </td>
+                    <td>
+                        <input type="radio" name="category" id="cv3" value="vegi">Root Vegitables<br>
+                        <input type="radio" name="category" id="cv5" value="fruit">Fruits<br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- contents (results) -->
+        <div id="searchContent">
+            <table id="resultTable">
+                <tr>
+                    <td>Name</td>
+                    <td>Keep</td>
+                    <td>Froze?</td>
+                    <td>Category</td>
+                    <td>Id</td>
+                </tr>
+                <tr>
+                    <td><a href="content.html" class="foodLink">Apple</a></td>
+                    <td>Short</td>
+                    <td>Yes</td>
+                    <td>Vegitable</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tdMeat"><a href="content.html" class="foodLink">Beef</a></td>
+                    <td class="tdMeat">Long</td>
+                    <td class="tdMeat">Yes</td>
+                    <td class="tdMeat">Meat</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tdDaily"><a href="content.html" class="foodLink">Egg</a></td>
+                    <td class="tdDaily">Long</td>
+                    <td class="tdDaily">Yes</td>
+                    <td class="tdDaily">Daily</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="content.html" class="foodLink">Leek</a></td>
+                    <td>Short</td>
+                    <td>No</td>
+                    <td>Vegitable</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="content.html" class="foodLink">Lettus</a></td>
+                    <td>Short</td>
+                    <td>No</td>
+                    <td>Vegitable</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="content.html" class="foodLink">Orange</a></td>
+                    <td>Short</td>
+                    <td>No</td>
+                    <td>Vegitable</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tdMeat"><a href="content.html" class="foodLink">Pork ground meat</a></td>
+                    <td class="tdMeat">Long</td>
+                    <td class="tdMeat">Yes</td>
+                    <td class="tdMeat">Meat</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tdFish"><a href="content.html" class="foodLink">Saury</a></td>
+                    <td class="tdFish">Long</td>
+                    <td class="tdFish">Yes</td>
+                    <td class="tdFish">Fish</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- footer -->
+        <div class="spaceForFooter"></div>
+        <div id="conFooter">
+            <a href="aboutus.html" id="conAboutus">About Us</a>
+            <p>Copyright &copy; 2017 Test company</p>
+        </div>
+                
+    </body>
+
+</html>
